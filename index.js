@@ -13,3 +13,9 @@ closeBtn.addEventListener("click", closeModal)
 function closeModal(){
     modal.style.display = "none"
 }
+
+modal.addEventListener("click", function(e){
+    if(e.target.classList.contains('modal')){
+        closeModal()
+    }
+})
