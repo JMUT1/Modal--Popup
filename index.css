@@ -36,6 +36,7 @@ button:hover{
     place-items: center;
     background: rgba(0,0,0,0.3);   
     display: none;
+    animation: openModal 1s linear forwards;
 }
 
 .modal .card{
@@ -95,7 +96,32 @@ button:hover{
     color: white;
     padding: 0 1.6rem;
     cursor: pointer;
+}
 
+/* OPENING MODAL */
+
+@keyframes openModal{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* CLOSING THE MODAL */
+
+@keyframes closeModal{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.close-modal-animation{
+    animation: closeModal 1s linear forwards;
 }
 
 /* =============MEDIA QUERYS */
